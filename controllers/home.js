@@ -13,7 +13,7 @@ module.exports = {
 
             res.render('index',{ 
             	"comments": sorted,
-            	title: "Message Board",
+            	title: "Write a Message",
             	isHome: true
             });
             console.log(comments.length + ' attempted sorted comments found');

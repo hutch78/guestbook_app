@@ -8,7 +8,7 @@ module.exports = {
 		var viewModel = commentModel.find(function(err, comments) {
             res.render('comments',{
             	"comments": comments,
-            	title: "The Wall",
+            	title: "The Timeline",
             	isComments: true
             });
             // console.log(comments);
