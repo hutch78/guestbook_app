@@ -3,11 +3,15 @@
 
     <div class="message-container comments-page">
         {{#each comments}}
-            <p class="body-text">
-                {{ comment }}
-                <br />
-                <span class="timestamp">{{ timestamp }}</span>
-            </p>
+           {{#if comment}}
+             <div class="a-comment">
+                 <p class="body-text">
+                     &ldquo;{{ comment }}&rdquo;
+                 </p>
+                 <span class="author-line">by: {{ author }}</span>
+                 <span class="timestamp">{{ timeago timestamp }}</span>
+             </div>
+           {{/if}}
         {{/each}}
     </div>
 

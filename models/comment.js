@@ -10,6 +10,4 @@ var CommentSchema = new Schema({
 	timestamp: { type: Date, 'default': Date.now }
 });
 
-console.log('comment schema accessed');
-
 module.exports = mongoose.model('Comment', CommentSchema);

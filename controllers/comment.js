@@ -8,10 +8,10 @@ module.exports = {
 		var viewModel = commentModel.find(function(err, comments) {
             res.render('comments',{
             	"comments": comments,
-            	title: "View All",
+            	title: "The Wall",
             	isComments: true
             });
-            console.log(comments);
+            // console.log(comments);
             console.log(comments.length + ' comments found');
         });
 	},
@@ -21,8 +21,11 @@ module.exports = {
 
 			//creates the image model with details from the request (req)
 			var newComment = new commentModel({
-				comment: req.body.comment
+				comment: req.body.comment,
+				author: req.body.author
 			});
+
+			console.log(newComment);
 
 			//saves the image - mongoose function
 			newComment.save(function(err, comment) {

@@ -29,6 +29,7 @@ MY GUESTBOOK APP
 }
 
 .wrap {
+	padding-left: 30px;
 	overflow: hidden;
 	position: relative;
 	margin-top:200px;
@@ -41,7 +42,10 @@ MY GUESTBOOK APP
 =- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
 
 h1, h2, h3 {
-	.lust;
+	.prox(900);
+	text-transform: uppercase;
+	color: @accent1;
+	
 }
 
 h1 {
@@ -62,46 +66,76 @@ p {
 }
 
 label {
-	.lust;
+	.prox(900);
+	text-transform: uppercase;
 	font-size: 36px;
+	color: @accent1;
 	&:focus {
-		color: red;
+		color: black;
 	}
 }
 
 .timestamp {
 	font-size: 14px;
 	text-transform: uppercase;
-	
+	.prox(100);
 }
 
-.home-link {
-	display: inline-block;
-	
-	margin-bottom: 40px;
-	border: 1px solid rgba(0,0,0,1);
-	position: absolute;
-	top: 75px;
-	right: 77px;
+.cta-btn {
+	display: block;
 	text-decoration: none;
+	border: rgba(0,0,0,0);
+	background: @accent1;
 	.ease1;
+	border-right: 5px;
+	
+	cursor: pointer;
 
 	span {
-		color: black;
+		color: white;
 		display: block;
-		padding: 10px 20px 10px 30px;
-		.prox(300);
+		letter-spacing: 1px;
+		padding: 10px 20px;
+		font-size: 16px;
+		.prox(700);
 		text-transform: uppercase;
-		letter-spacing: 4px;
-		.ease1;
-	}
-
-	i {
 		.ease1;
 	}
 
 	&:hover {
+		background: black;
+		// color: #428BCA;
+	}
+	i {
+		.ease1;
+	}
+}
+
+.home-link {
+	display: inline-block;
+	background: @accent1;
+	margin-bottom: 40px;
+	border: 1px solid rgba(0,0,0,1);
+	
+	text-decoration: none;
+
+	span {
+		color: #FF5722;
+		display: block;
+		padding: 10px 20px 10px 30px;
+		.prox(700);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		.ease2;
+	}
+
+	i {
+		.ease2;
+	}
+
+	&:hover {
 		border: 1px solid rgba(0,0,0,.3);
+		background: #FF5722;
 		span {
 			color: #428BCA;
 		}
@@ -109,7 +143,8 @@ label {
 }
 
 .the-end {
-	.lust;
+	.prox(900);
+	text-transform: uppercase;
 	font-size: 48px;
 	margin: 40px 0;
 }
@@ -160,13 +195,22 @@ label {
 =- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
 
 header {
+	padding-left: 30px;
 	width: 100%;
 	position: fixed;
 	background: white;
 	z-index:1000;
 	top: 0;
 	height: 200px;
-	border-bottom: 1px solid black;
+	// border-bottom: 1px solid #FF5722;
+	.box-shadow1;
+
+	.cta-btn {
+		position: absolute;
+		top: 75px;
+		right: 77px;
+
+	}
 }
 
 
@@ -190,13 +234,13 @@ header {
 		letter-spacing: 1px;
 		padding: 10px 20px;
 		font-size: 16px;
-		.prox(100);
+		.prox(700);
 		text-transform: uppercase;
 		.ease1;
 	}
 
 	&:hover {
-		background: black;
+		background: #FF5722;
 		// color: #428BCA;
 	}
 	i {
@@ -214,13 +258,22 @@ input[type="text"], textarea {
 	padding: 20px;
 	.prox(100);
 	font-size: 20px;
-	.ease2;
-	border: 1px solid black;
+	.ease1;
+	border: none;
+	color: @accent1;
+	border-bottom: 2px dotted rgba(0,0,0,0);
+	transform: translateZ(0);
+
+	.box-shadow1;
 	margin: 15px 0;
 	border-radius: 8px;
 
 	&:focus {
-		border-color: #428BCA;
+		border-bottom: 2px dotted rgba(0,0,0,.3);
+
+		-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.39);
+		-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.39);
+		box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.39);
 	}
 }
 
@@ -268,16 +321,6 @@ aside {
 	margin-right: 100px;
 
 	&.comments-page {
-		width: 100%;
-		p {
-			font-size: 46px;
-			margin:20px 0;
-
-			@media screen and (min-width: 768px){
-				float: left;
-				.rowMachine(2, 5%);
-			}
-		}
 	}
 }
 .message-form {
@@ -286,8 +329,53 @@ aside {
 }
 
 .a-comment {
-	margin-bottom: 30px;
+	overflow: hidden;
+	margin-bottom: 60px;
+	border-top: 1px dashed rgba(0,0,0,.3);
 	p {
+		margin: 30px 15px 0 0;
 		font-size: 30px;
+	}
+
+	.author-line {
+		display: block;
+		margin-top:20px;
+		margin-bottom: 10px;	
+		.prox(900);
+		text-transform: uppercase;
+		font-size: 13px;
+		letter-spacing: 4px;
+		color: @neutral1;
+	}
+}
+
+
+.comments-page {
+	width: 100%;
+	p {
+		font-size: 46px;
+		margin:20px 0;
+
+	}
+
+	.a-comment {
+		margin-bottom: 62px;
+		padding-top: 22px;
+
+		.body-text {
+			margin-bottom: 40px;
+			width: 100%;
+		}
+
+		.author-line, .timestamp {
+			display: block;
+			text-align: right;
+			padding-right: 80px;
+		}
+
+		@media screen and (min-width: 768px){
+			float: left;
+			.rowMachine(2, 5%);
+		}
 	}
 }

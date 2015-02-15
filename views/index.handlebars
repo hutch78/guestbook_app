@@ -6,13 +6,20 @@
 		
 		<div class="message-container">
 			{{#each comments}}
-		        <div class="a-comment">
-		        	<p class="body-text">
-		        		{{ comment }}
-		        		<br />
-		        		<span class="timestamp">{{ timestamp }}</span>
-		        	</p>
-		        </div>
+		        {{#if comment}}
+			        <div class="a-comment">
+			        	<p class="body-text">
+			        		&ldquo;&nbsp;{{ comment }}&nbsp;&rdquo;
+			        		{{#if author }}
+								<span class="author-line">By: {{ author }}</span>
+
+							{{else}}
+								<br />
+			        		{{/if}}
+			        		<span class="timestamp">{{ timeago timestamp }}</span>
+			        	</p>
+			        </div>
+		        {{/if}}
 			{{/each}}
 
 			<h4 class="the-end">The End</h4>
@@ -26,13 +33,13 @@
 				<label for="comment">
 					Comment:
 					<div class="col-md-10">
-						<input type="text" placeholder="Your Name*">
+						<input type="text" name="author" placeholder="Your Name*">
 						<textarea class="form-control" name="comment" rows="2" maxlength="140" placeholder="Your Message*"></textarea>
 					</div>
 				</label>
 				
 				<div class="sub-row form-group col-md-12">
-					<button type="submit" id="send-message" type="button">
+					<button type="submit" class="cta-btn" type="button">
 						<span class="fa-move-right">
 							Send
 							<i class="fa fa-arrow-right"></i>
