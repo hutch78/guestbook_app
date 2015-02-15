@@ -1,0 +1,49 @@
+
+
+<div class="center">
+
+	<div class="message-board">
+		
+		<div class="message-container">
+			{{#each comments}}
+		        <div class="a-comment">
+		        	<p class="body-text">
+		        		{{ comment }}
+		        		<br />
+		        		<span class="timestamp">{{ timestamp }}</span>
+		        	</p>
+		        </div>
+			{{/each}}
+
+			<h4 class="the-end">The End</h4>
+		</div>
+	</div>
+
+	<aside class="sidebar">
+
+		<div class="message-form">
+			<form method="post" action="/comments/create" enctype="application/x-www-form-urlencoded">
+				<label for="comment">
+					Comment:
+					<div class="col-md-10">
+						<input type="text" placeholder="Your Name*">
+						<textarea class="form-control" name="comment" rows="2" maxlength="140" placeholder="Your Message*"></textarea>
+					</div>
+				</label>
+				
+				<div class="sub-row form-group col-md-12">
+					<button type="submit" id="send-message" type="button">
+						<span class="fa-move-right">
+							Send
+							<i class="fa fa-arrow-right"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+
+	</aside>
+
+
+
+</div>

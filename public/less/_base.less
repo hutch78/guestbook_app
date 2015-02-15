@@ -1,0 +1,293 @@
+/******************************************************************
+
+MY GUESTBOOK APP
+
+******************************************************************/
+
+/* =- -= =- -= =- -= =--= =- -= =- -= =--= =-  -= =- -= =--= =- -= =--= =- 
+
+	Bootstrap Overrides :( ---------------------------------------------------
+
+=- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
+
+.panel {
+	border: none;
+}
+
+
+/* =- -= =- -= =- -= =--= =- -= =- -= =--= =-  -= =- -= =--= =- -= =--= =- 
+
+	Global ---------------------------------------------------
+
+=- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
+
+.center {
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.wrap {
+	overflow: hidden;
+	position: relative;
+	margin-top:200px;
+}
+
+/* =- -= =- -= =- -= =--= =- -= =- -= =--= =-  -= =- -= =--= =- -= =--= =- 
+
+	Typog ---------------------------------------------------
+
+=- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
+
+h1, h2, h3 {
+	.lust;
+}
+
+h1 {
+	font-size: 72px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+p {
+	.prox(100);
+	font-size: 24px;
+}
+
+label {
+	.lust;
+	font-size: 36px;
+	&:focus {
+		color: red;
+	}
+}
+
+.timestamp {
+	font-size: 14px;
+	text-transform: uppercase;
+	
+}
+
+.home-link {
+	display: inline-block;
+	
+	margin-bottom: 40px;
+	border: 1px solid rgba(0,0,0,1);
+	position: absolute;
+	top: 75px;
+	right: 77px;
+	text-decoration: none;
+	.ease1;
+
+	span {
+		color: black;
+		display: block;
+		padding: 10px 20px 10px 30px;
+		.prox(300);
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		.ease1;
+	}
+
+	i {
+		.ease1;
+	}
+
+	&:hover {
+		border: 1px solid rgba(0,0,0,.3);
+		span {
+			color: #428BCA;
+		}
+	}
+}
+
+.the-end {
+	.lust;
+	font-size: 48px;
+	margin: 40px 0;
+}
+
+.fa-move-left {
+	i {
+		margin-right: 10px;
+		-webkit-transform: translate3D(0, 0, 0);
+		-moz-transform: translate3D(0, 0, 0);
+		-o-transform: translate3D(0, 0, 0);
+		transform: translate3D(0, 0, 0);
+	}
+
+	&:hover {
+		i {
+			-webkit-transform: translate3D(-5px, 0, 0);
+			-moz-transform: translate3D(-5px, 0, 0);
+			-o-transform: translate3D(-5px, 0, 0);
+			transform: translate3D(-5px, 0, 0);
+		}
+	}
+}
+
+.fa-move-right {
+	i {
+		margin-left: 10px;
+		-webkit-transform: translate3D(0, 0, 0);
+		-moz-transform: translate3D(0, 0, 0);
+		-o-transform: translate3D(0, 0, 0);
+		transform: translate3D(0, 0, 0);
+	}
+
+	&:hover {
+		i {
+			-webkit-transform: translate3D(5px, 0, 0);
+			-moz-transform: translate3D(5px, 0, 0);
+			-o-transform: translate3D(5px, 0, 0);
+			transform: translate3D(5px, 0, 0);
+		}
+	}
+}
+
+
+/* =- -= =- -= =- -= =--= =- -= =- -= =--= =-  -= =- -= =--= =- -= =--= =- 
+
+	Header ---------------------------------------------------
+
+=- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
+
+header {
+	width: 100%;
+	position: fixed;
+	background: white;
+	z-index:1000;
+	top: 0;
+	height: 200px;
+	border-bottom: 1px solid black;
+}
+
+
+/* =- -= =- -= =- -= =--= =- -= =- -= =--= =-  -= =- -= =--= =- -= =--= =- 
+
+	Form Stuff ---------------------------------------------------
+
+=- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
+
+#send-message {
+	border: rgba(0,0,0,0);
+	background: #428BCA;
+	.ease1;
+	border-right: 5px;
+	
+	cursor: pointer;
+
+	span {
+		color: white;
+		display: block;
+		letter-spacing: 1px;
+		padding: 10px 20px;
+		font-size: 16px;
+		.prox(100);
+		text-transform: uppercase;
+		.ease1;
+	}
+
+	&:hover {
+		background: black;
+		// color: #428BCA;
+	}
+	i {
+		.ease1;
+	}
+}
+
+input, textarea, button {
+	outline: none!important;
+	resize: none!important;
+}
+
+input[type="text"], textarea {
+	width: 100%;
+	padding: 20px;
+	.prox(100);
+	font-size: 20px;
+	.ease2;
+	border: 1px solid black;
+	margin: 15px 0;
+	border-radius: 8px;
+
+	&:focus {
+		border-color: #428BCA;
+	}
+}
+
+textarea {
+	height: 200px;
+	
+}
+
+.sub-row {
+	padding: 0;
+	text-align: right;
+
+}
+
+
+/* =- -= =- -= =- -= =--= =- -= =- -= =--= =-  -= =- -= =--= =- -= =--= =- 
+
+	Layout ---------------------------------------------------
+
+=- -= =--= =- -= = --= =- -= =--= =-  -= =- -= =--= =- -= =- -= =- */
+
+.message-board {
+	float: left;
+	width: 700px;
+	height: 100%;
+	overflow-y: auto;
+	position: fixed;
+	padding: 40px 40px 200px 10px;
+}
+
+.message-board::-webkit-scrollbar { width: 0 !important; }
+.message-board { -ms-overflow-style: none!important; }
+.message-board { overflow: -moz-scrollbars-none!important; }
+
+aside {
+	float: right;
+	width: 40%;
+	padding: 40px;
+}
+
+
+.message-container {
+	width: 519px;
+	float: left;
+	margin-right: 100px;
+
+	&.comments-page {
+		width: 100%;
+		p {
+			font-size: 46px;
+			margin:20px 0;
+
+			@media screen and (min-width: 768px){
+				float: left;
+				.rowMachine(2, 5%);
+			}
+		}
+	}
+}
+.message-form {
+	margin-top: 20px;
+	float: left;
+}
+
+.a-comment {
+	margin-bottom: 30px;
+	p {
+		font-size: 30px;
+	}
+}

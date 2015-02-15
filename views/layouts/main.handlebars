@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>My Guestbook</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+    </head>
+    <body>
+        
+        {{!-- typekit --}}
+        <script src="//use.typekit.net/ekn8kjx.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+        <header>
+
+            <div class="center">
+                
+                <h1>{{{ title }}}</h1>
+
+                {{#if isHome }}
+                   
+                   <a href="/comments" class="home-link">
+                       <span class="fa-move-right">
+                           View All
+                           <i class="fa fa-arrow-right"></i>
+                       </span>
+                   </a>
+
+                 {{/if}}
+
+                 {{#if isComments }}
+                    
+                   
+                   <a href="/" class="home-link">
+                       <span class="fa-move-left">
+                           <i class="fa fa-arrow-left"></i>
+                           Back Home
+                       </span>
+                   </a>
+
+                  {{/if}}
+
+           
+
+            </div>
+            
+        </header>
+
+       <div class="wrap">
+           
+
+            {{{ body }}}
+
+       </div>
+    </body>
+</html>
